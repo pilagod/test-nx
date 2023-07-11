@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "packages/*"
+    "foundry",
+    "hardhat"
   ],
   "devDependencies": {
     "nx": "16.5.1"
