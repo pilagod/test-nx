@@ -26,8 +26,8 @@ RUN mkdir node && \
     npm install --save-dev hardhat @nomicfoundation/hardhat-foundry typechain @typechain/hardhat@6.1.6 @typechain/ethers-v5
 
 COPY ./foundry /foundry
-COPY ./hardhat/docker/typechain/entry.sh /foundry
-COPY ./hardhat/docker/typechain/hardhat.config.js /foundry
+COPY ./hardhat/docker/build/entry.sh /foundry
+COPY ./hardhat/docker/build/hardhat.config.js /foundry
 
 RUN mv /node/node_modules /foundry
 WORKDIR /foundry

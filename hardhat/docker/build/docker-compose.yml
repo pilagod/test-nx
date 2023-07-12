@@ -1,8 +1,8 @@
 version: "3.8"
 services:
-  typechain:
+  builder:
     build: 
       context: ../../../
-      dockerfile: ./hardhat/docker/typechain/Dockerfile
+      dockerfile: ./hardhat/docker/build/Dockerfile
     volumes:
       - ../../:/out

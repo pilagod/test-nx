@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "docker compose -f ./docker/typechain/docker-compose.yml up --build --exit-code-from typechain --remove-orphans",
+    "build": "docker compose -f ./docker/build/docker-compose.yml up --build --exit-code-from builder --remove-orphans",
     "test": "hardhat test --no-compile"
   },
   "author": "",
