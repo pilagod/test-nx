@@ -4,8 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "typechain": "docker compose -f ./docker/typechain/docker-compose.yml up --build --exit-code-from typechain --remove-orphans",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@typechain/ethers-v5": "^11.0.0",
+    "@typechain/hardhat": "^8.0.0",
+    "hardhat": "^2.16.1",
+    "typechain": "^8.2.0"
+  }
 }
