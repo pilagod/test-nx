@@ -1,19 +1,21 @@
 #!/bin/bash
 
 source ~/.bashrc
+
+npx hardhat compile --no-typechain
 npx hardhat typechain
 
-if [ -d "/out/artifacts" ]; then
+if [ -d "./artifacts" ]; then
     rm -rf /out/artifacts
+    mv ./artifacts /out
 fi
-mv ./artifacts /out
 
-if [ -d "/out/cache" ]; then
+if [ -d "./cache" ]; then
     rm -rf /out/cache
+    mv ./cache /out
 fi
-mv ./cache /out
 
-if [ -d "/out/typechain-types" ]; then
+if [ -d "./typechain-types" ]; then
     rm -rf /out/typechain-types
+    mv ./typechain-types /out
 fi
-mv ./typechain-types /out
