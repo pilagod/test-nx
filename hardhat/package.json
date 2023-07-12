@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "docker compose -f ./docker/typechain/docker-compose.yml up --build --exit-code-from typechain --remove-orphans",
+    "build": "docker compose -f ./docker/typechain/docker-compose.yml up --build --exit-code-from typechain --remove-orphans",
     "test": "hardhat test --no-compile"
   },
   "author": "",
@@ -22,5 +22,14 @@
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.6"
+  },
+  "nx": {
+    "targets": {
+      "test": {
+        "dependsOn": [
+          "build"
+        ]
+      }
+    }
   }
 }
